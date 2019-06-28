@@ -1,4 +1,4 @@
-import {createStackNavigator,DrawerNavigator,createMaterialTopTabNavigator,StackNavigator} from 'react-navigation'
+import {SwitchNavigator,DrawerNavigator,createMaterialTopTabNavigator,StackNavigator} from 'react-navigation'
 
 
 
@@ -8,10 +8,7 @@ import DabareMa from "../DarbareMa";
 import Home from './../Home'
 import SabetName from "../SabetName";
 import Login from './../Login'
-import GhabezZarime from "../Stack/GhabezZarime";
-const Stack=createStackNavigator({
-    ghabezZarime:{screen:GhabezZarime}
-})
+import Stack from './Stack'
 
 const TabNav=createMaterialTopTabNavigator({
 
@@ -22,11 +19,15 @@ const TabNav=createMaterialTopTabNavigator({
 },{
     tabBarPosition:"bottom"
 })
-export default Drawer=DrawerNavigator({
+const Switch=SwitchNavigator({
+    Stack
 
-    TabNav:{
-        screen:TabNav
-    },
+
+
+})
+export default Drawer=DrawerNavigator({
+  Switch,
+  TabNav,
     home:{screen:Home},
     ertebatBaMa:{screen:ErtebatBaMa},
     dabarema:{screen:DabareMa},
