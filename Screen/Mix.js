@@ -17,7 +17,8 @@ const TabNav=createMaterialTopTabNavigator({
     sabetName:{screen:SabetName},
 
 },{
-    tabBarPosition:"bottom"
+    tabBarPosition:"bottom",
+    header:null
 })
 const Switch=SwitchNavigator({
     Stack
@@ -35,6 +36,10 @@ export default Drawer=DrawerNavigator({
 
 },{
     drawerPosition:'right',
-    drawerWidth:200
+    drawerWidth:200,
+    navigationOptions:{
+        header:null
+    }
+
 })
 
