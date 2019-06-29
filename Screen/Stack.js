@@ -5,7 +5,6 @@ import Aks from "../Stack/Aks";
 import HamrahAval from "../Stack/HamrahAval";
 import Irancell from "../Stack/Irancell";
 import Bus from "../Stack/Bus";
-import KhadamatPardakhtElectroniky from "../Stack/KhadamatPardakhtElectroniky";
 import Kharid from "../Stack/Kharid";
 import KharidBasteEnternety from "../Stack/KharidBasteEnternety";
 import KharidSharj from "../Stack/KharidSharj";
@@ -17,6 +16,9 @@ import Taksy from "../Stack/Taksy";
 import Cinama from "../Stack/Cinama";
 import Konsert from "../Stack/Konsert";
 import Food from "../Stack/Food";
+import Irancell1 from "../Stack/Irancell1";
+import HamrahAval1 from "../Stack/HamrahAval1";
+import Raytel1 from "../Stack/Raytel1";
 export default Stack=StackNavigator({
     aks:{screen:Aks},
      home:Home,
@@ -26,7 +28,6 @@ export default Stack=StackNavigator({
     bus:{screen:Bus},
     airPlane:{screen:AirPlane},
     taksy:{screen:Taksy},
-    khadamatPardakhtElectroniky:{screen:KhadamatPardakhtElectroniky},
     kharid:{screen:Kharid},
     kharidBasteEnternety:{screen:KharidBasteEnternety},
     kharidSharj:{screen:KharidSharj},
@@ -35,7 +36,10 @@ export default Stack=StackNavigator({
     sharjAsly:{screen:SharjAsly},
     cinama:{screen:Cinama},
     konsert:{screen:Konsert},
-    food:{screen:Food}
+    food:{screen:Food},
+    irancell1:{screen:Irancell1},
+    hamrahAval1:{screen:HamrahAval1},
+    raytel1:{screen:Raytel1}
 },{
     navigationOptions:{
         header:null
