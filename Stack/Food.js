@@ -5,7 +5,7 @@ import {
     Text
 }from 'react-native'
 
-export default class KhadamatPardakhtElectroniky extends Component {
+export default class Food extends Component {
     render() {
         return (
             <View>

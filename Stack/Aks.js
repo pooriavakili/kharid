@@ -37,8 +37,8 @@ const Style=StyleSheet.create({
 
     Asly:{
 
-        top:105,
-        left:70
+        top:300,
+        left:100
     },
     img2:{
         width:200,

@@ -14,6 +14,9 @@ import Raytel from "../Stack/Raytel";
 import SharjAsly from "../Stack/SharjAsly";
 import AirPlane from "../Stack/AirPlane";
 import Taksy from "../Stack/Taksy";
+import Cinama from "../Stack/Cinama";
+import Konsert from "../Stack/Konsert";
+import Food from "../Stack/Food";
 export default Stack=StackNavigator({
     aks:{screen:Aks},
      home:Home,
@@ -29,7 +32,10 @@ export default Stack=StackNavigator({
     kharidSharj:{screen:KharidSharj},
     pardakht:{screen:Pardakht},
     raytel:{screen:Raytel},
-    sharjAsly:{screen:SharjAsly}
+    sharjAsly:{screen:SharjAsly},
+    cinama:{screen:Cinama},
+    konsert:{screen:Konsert},
+    food:{screen:Food}
 },{
     navigationOptions:{
         header:null

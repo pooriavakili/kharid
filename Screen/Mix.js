@@ -12,9 +12,23 @@ import Stack from './Stack'
 
 const TabNav=createMaterialTopTabNavigator({
 
-    home:{screen:Home},
-    login:{screen:Login},
-    sabetName:{screen:SabetName},
+    home:{screen:Home,
+        navigationOptions:{
+            tabBarLabel:"صفحه اصلی"
+        }
+
+    },
+    login:{screen:Login,
+        navigationOptions:{
+            tabBarLabel:"ورود"
+        }
+
+    },
+    sabetName:{screen:SabetName,
+    navigationOptions:{
+        tabBarLabel:"ثبت نام"
+    }
+    },
 
 },{
     tabBarPosition:"bottom",
@@ -27,11 +41,34 @@ const Switch=SwitchNavigator({
 
 })
 export default Drawer=DrawerNavigator({
-  Switch,
-  TabNav,
-    home:{screen:Home},
-    ertebatBaMa:{screen:ErtebatBaMa},
-    dabarema:{screen:DabareMa},
+  Switch:{
+      screen:Switch,
+      navigationOptions:{
+          drawerLabel:"پرداخت"
+      }
+  },
+  TabNav:{
+      screen:TabNav,
+      navigationOptions:{
+          drawerLabel:"ورود و ثبت نام"
+      }
+  },
+    home:{screen:Home,
+    navigationOptions:{
+        drawerLabel:"صفحه اصلی"
+    }
+    },
+    ertebatBaMa:{screen:ErtebatBaMa,
+    navigationOptions: {
+        drawerLabel:"ارتباط با ما"
+    }
+
+    },
+    dabarema:{screen:DabareMa,
+    navigationOptions:{
+        drawerLabel:"درباره ما"
+    }
+    },
 
 
 },{

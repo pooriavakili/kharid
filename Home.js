@@ -1,17 +1,23 @@
 import React, {Component} from 'react';
 
-import {ScrollView,ImageBackground,View, Text, StyleSheet,TouchableWithoutFeedback} from 'react-native'
+import {Dimensions,ViewPagerAndroid,ScrollView,ImageBackground,View, Text, StyleSheet,TouchableWithoutFeedback} from 'react-native'
 import {Header, Left} from "native-base";
 
 import {Icon} from "react-native-elements";
 
+import Swipper from 'react-native-swiper-flatlist'
 
 export  default class home extends Component {
 
     render() {
-
+const {Width,Height}=Dimensions.get('window')
         return (
             <View style={Style.container}>
+                <ScrollView>
+
+
+
+
 
                 <Header style={Style.Header
                 }>
@@ -33,7 +39,6 @@ export  default class home extends Component {
 
 
                 </Header>
-
 
 
                     <TouchableWithoutFeedback
@@ -111,6 +116,47 @@ export  default class home extends Component {
                         </ImageBackground>
 
                     </TouchableWithoutFeedback>
+                <TouchableWithoutFeedback
+                    onPress={()=>{
+                        this.props.navigation.navigate('cinama')
+                    }}
+                >
+                    <ImageBackground
+                        style={Style.img11}
+                        source={require('./img/cinama.jpg')}>
+                        <Text style={Style.Text13}>سینما</Text>
+                    </ImageBackground>
+                </TouchableWithoutFeedback>
+                <TouchableWithoutFeedback
+                onPress={()=>{
+                    this.props.navigation.navigate('cinama')
+                }}
+                >
+                    <ImageBackground
+                    style={Style.img12}
+                    source={require('./img/konsert.jpg')}
+                    >
+                        <Text style={Style.Text14}>کنسرت</Text>
+                    </ImageBackground>
+                </TouchableWithoutFeedback>
+                <TouchableWithoutFeedback
+                    onPress={()=>{
+                        this.props.navigation.navigate('food')
+                    }}
+                >
+                    <ImageBackground
+                    style={Style.img13}
+                    source={require('./img/food.jpg')}
+                    >
+                        <Text
+                        style={Style.Text15}
+                        >غذا</Text>
+                    </ImageBackground>
+                </TouchableWithoutFeedback>
+
+
+
+                </ScrollView>
 
                 </View>
 
@@ -134,7 +180,7 @@ const Style=StyleSheet.create({
     img10:{
       width:80,
       height:80,
-        top:-100,
+        top:-110,
         left:320
     },
 
@@ -233,6 +279,48 @@ fontSize:20,
         direction:"rtl",
         top:80,
         right:20
+    },
+    img11:{
+        top:-100,
+        left:20,
+        width:80,
+        height:80
+    },
+    Text13:{
+        fontSize:20,
+        color:"black",
+        width:"130%",
+        direction:"rtl",
+        top:80,
+        right:40
+    },
+    img12:{
+        top:-180,
+        left:180,
+        width:80,
+        height:80
+    },
+    Text14:{
+        fontSize:20,
+        color:"black",
+        width:"130%",
+        direction:"rtl",
+        top:80,
+        right:40
+    },
+    img13:{
+        top:-250,
+        left:320,
+        width:80,
+        height:80
+    },
+    Text15:{
+        fontSize:20,
+        color:"black",
+        width:"130%",
+        direction:"rtl",
+        top:80,
+        right:40
     }
 
 })

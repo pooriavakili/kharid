@@ -5,7 +5,7 @@ import {
     Text
 }from 'react-native'
 
-export default class KhadamatPardakhtBanky extends Component {
+export default class Konsert extends Component {
     render() {
         return (
             <View>
