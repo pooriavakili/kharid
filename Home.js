@@ -5,12 +5,11 @@ import {Header, Left} from "native-base";
 
 import {Icon} from "react-native-elements";
 
-import Swipper from 'react-native-swiper-flatlist'
 
 export  default class home extends Component {
 
     render() {
-const {Width,Height}=Dimensions.get('window')
+
         return (
             <View style={Style.container}>
                 <ScrollView>
@@ -154,8 +153,34 @@ const {Width,Height}=Dimensions.get('window')
                     </ImageBackground>
                 </TouchableWithoutFeedback>
 
-
-
+                    <TouchableWithoutFeedback
+                        onPress={()=>{
+                            this.props.navigation.navigate('hotel')
+                        }}
+                    >
+                        <ImageBackground
+                            style={Style.img14}
+                            source={require('./img/hotel1.jpg')}
+                        >
+                            <Text
+                                style={Style.Text30}
+                            >رزو هتل</Text>
+                        </ImageBackground>
+                    </TouchableWithoutFeedback>
+                    <TouchableWithoutFeedback
+                        onPress={()=>{
+                            this.props.navigation.navigate('khane')
+                        }}
+                    >
+                        <ImageBackground
+                            style={Style.img15}
+                            source={require('./img/khane.jpg')}
+                        >
+                            <Text
+                                style={Style.Text31}
+                            >خانه</Text>
+                        </ImageBackground>
+                    </TouchableWithoutFeedback>
                 </ScrollView>
 
                 </View>
@@ -309,7 +334,7 @@ fontSize:20,
         right:40
     },
     img13:{
-        top:-250,
+        top:-260,
         left:320,
         width:80,
         height:80
@@ -321,6 +346,34 @@ fontSize:20,
         direction:"rtl",
         top:80,
         right:40
+    },
+    img14:{
+        top:-200,
+        left:20,
+        width:80,
+        height:80
+    },
+    Text30:{
+        fontSize:20,
+        color:"black",
+        width:"130%",
+        direction:"rtl",
+        top:80,
+        right:30
+    },
+    img15:{
+        top:-280,
+        left:180,
+        width:80,
+        height:80
+    },
+    Text31:{
+        fontSize:20,
+        color:"black",
+        width:"130%",
+        direction:"rtl",
+        top:80,
+        right:50
     }
 
 })

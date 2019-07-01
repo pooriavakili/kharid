@@ -1,7 +1,6 @@
-import {SwitchNavigator,DrawerNavigator,createMaterialTopTabNavigator,StackNavigator} from 'react-navigation'
-
-
-
+import {SwitchNavigator,DrawerNavigator,createBottomTabNavigator,StackNavigator} from 'react-navigation'
+import {Icon, Image} from 'react-native-elements'
+import React from 'react'
 
 import ErtebatBaMa from "../ErtebatBaMa";
 import DabareMa from "../DarbareMa";
@@ -10,23 +9,34 @@ import SabetName from "../SabetName";
 import Login from './../Login'
 import Stack from './Stack'
 
-const TabNav=createMaterialTopTabNavigator({
+const TabNav=createBottomTabNavigator({
 
     home:{screen:Home,
         navigationOptions:{
-            tabBarLabel:"صفحه اصلی"
+        tabBarLabel:"خانه",
+            tabBarIcon:<Icon name='home'
+            style={{
+            width:40,
+                height:40
+            }}
+
+            />
         }
 
     },
     login:{screen:Login,
         navigationOptions:{
-            tabBarLabel:"ورود"
+            tabBarLabel:"ورود",
+
+
         }
 
     },
     sabetName:{screen:SabetName,
     navigationOptions:{
-        tabBarLabel:"ثبت نام"
+        tabBarLabel:"ثبت نام",
+
+
     }
     },
 
