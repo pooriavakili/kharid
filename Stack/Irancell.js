@@ -18,9 +18,11 @@ export default class Kharid extends Component {
         return (
             <View>
                 <Picker
+                    selectedValue={this.state.number}
+
                     style={Style.Pic}
-                    onValueChange={(itemValue,itemIndex)=>
-                        this.setState({sharj:itemValue})
+                    onValueChange={(itemValue, itemIndex) =>
+                        this.setState({number: itemValue})
                     }
 
                 >

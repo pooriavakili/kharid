@@ -19,8 +19,9 @@ export default class Kharid extends Component {
             <View>
                 <Picker
                     style={Style.Pic}
-                    onValueChange={(itemValue,itemIndex)=>
-                        this.setState({sharj:itemValue})
+                    selectedValue={this.state.number}
+                    onValueChange={(itemValue, itemIndex) =>
+                        this.setState({number: itemValue})
                     }
 
                 >
@@ -32,7 +33,7 @@ export default class Kharid extends Component {
                     style={Style.Text2}
                 >مبلغ دلخواه</Text>
                 <TextInput onChangeText={(text)=>{
-                    this.setState({number:text})
+                    this.setState({sharj:text})
 
                 }}
                            value={this.state.number}
