@@ -2,15 +2,20 @@ import React, {Component} from 'react';
 
 import {
     View,
-    Text
+    Text,
+    WebView
 }from 'react-native'
 
 export default class Pardakht extends Component {
+
+
     render() {
         return (
-            <View>
-                <Text>salam</Text>
-            </View>
+            <WebView
+                source={{uri: 'https://docs.payping.ir/#tag/Payment'}}
+                style={{marginTop:20}}
+
+            />
         );
     }
 }
