@@ -1,2 +1,2 @@
 # kharid
-react-native developer
+react-native 
